@@ -46,3 +46,7 @@ if __name__ == "__main__":
     # plot_random_images(X_train, Y_train)
 
     use_nearest_neighbor(X_train, X_test, Y_train, Y_test)
+
+    # TODO: Add kNN Classifier
+    # TODO: Add SVM Classifier
+    # TODO: Add NeuralNetwork Classifier
