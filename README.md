@@ -10,3 +10,8 @@ Goal of this repo is to write about my learnings every week. This will help me i
 + [Pytorch basics](Deep-Learning/pytorch_basics.ipynb)
 + [Simple 2-layer Neural Network](Deep-Learning/simple_neural_network.ipynb)
 + [MNIST Dataset Neural Network](Deep-Learning/mnist_neural_network.ipynb)
++ [Horses or Humans Custom Neural Network](Deep-Learning/horses_or_humans_nn.ipynb)
+
+## Week #2
+
++ [Transfer Learning on Horses or Humans Dataset](Deep-Learning/TransferLearning/horses_or_humans_model.ipynb)
