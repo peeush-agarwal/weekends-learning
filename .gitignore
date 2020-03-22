@@ -132,3 +132,5 @@ dmypy.json
 # Custom ignore rules
 /Deep-Learning/Data/horses-or-humans-dataset/**
 Deep-Learning/Data/CIFAR-10/**
+Deep-Learning/Data/real-world-dataset.zip
+Deep-Learning/Data/real-world-dataset/**
