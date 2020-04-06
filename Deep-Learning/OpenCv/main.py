@@ -1,9 +1,12 @@
 from edge_detection import detect_edges, detect_edges_real_time, detect_edges_real_time_advanced
+from flip_images import flip_webcam_frames_vertically
 
 if __name__ == "__main__":
-    detect_edges_real_time_advanced()
+    flip_webcam_frames_vertically()
+
 
     if False:
+        detect_edges_real_time_advanced()
         detect_edges_real_time()
 
 
