@@ -132,3 +132,4 @@ dmypy.json
 # Custom ignore rules
 Deep-Learning/Data/**
 Deep-Learning/OpenCv/Data/**
+.vscode/settings.json
