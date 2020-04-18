@@ -133,3 +133,4 @@ dmypy.json
 Deep-Learning/Data/**
 Deep-Learning/OpenCv/Data/**
 .vscode/settings.json
+Deep-Learning/Datasets/mlruns/**
