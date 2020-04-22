@@ -132,6 +132,8 @@ dmypy.json
 # Custom ignore rules
 Deep-Learning/Data/**
 Deep-Learning/OpenCv/Data/**
-.vscode/settings.json
+**/.vscode/settings.json
 Deep-Learning/Datasets/mlruns/**
 Projects/MNIST/Data/**
+
+Deep-Learning/OpenCv/PyImageSearch-tutorials/Data/Output/**
