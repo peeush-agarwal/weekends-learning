@@ -1,7 +1,8 @@
 import argparse
 import cv2
 import imutils
-from ShapeProcessor.shape_processor import ShapeProcessor
+from ImageProcessor.shape_detector import ShapeDetector
+from ImageProcessor.shape_center import ShapeCenter
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-i', '--image', required=True, help="Input image path")
@@ -18,10 +19,11 @@ thresh = cv2.threshold(blurred, 60, 255, cv2.THRESH_BINARY)[1]
 cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 
-shape_processor = ShapeProcessor()
+shape_detector = ShapeDetector()
+shape_center = ShapeCenter()
 
 for c in cnts:
-    cX, cY = shape_processor.findCenter(c, ratio)
+    cX, cY = shape_center.findCenter(c, ratio)
 
     c = c.astype("float")
     c *= ratio
@@ -29,7 +31,7 @@ for c in cnts:
 
     cv2.drawContours(img, [c], -1, (0, 255, 0), thickness=2)
     cv2.circle(img, (cX, cY), 7, (255, 255, 255), thickness=-1)
-    cv2.putText(img, shape_processor.detect(c), (cX-20, cY-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
+    cv2.putText(img, shape_detector.detect(c), (cX-20, cY-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
 
     cv2.imshow('Shape', img)
     cv2.waitKey(500)
