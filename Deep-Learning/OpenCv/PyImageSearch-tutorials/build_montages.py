@@ -6,10 +6,12 @@ import random
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--images", required=True, help="Path to input images")
-ap.add_argument("-n", "--num-of-images", type=int, default=21, help="number of images to be montaged together")
+ap.add_argument("-n", "--num_of_images", type=int, default=21, help="number of images to be montaged together")
 args = vars(ap.parse_args())
 
-image_paths = paths.list_images(args["images"])
+image_paths = list(paths.list_images(args["images"]))
+random.shuffle(image_paths)
+image_paths = image_paths[:args["num_of_images"]]
 
 images = []
 for img_path in image_paths:
