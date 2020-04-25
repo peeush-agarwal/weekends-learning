@@ -12,6 +12,7 @@ import processor
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-i', '--input', required=True, help = "Path of input image")
+ap.add_argument('-o', '--output', required=True, help = "Path of output image")
 ap.add_argument('-s', '--show_intermediate', type=bool, default=False, help="Show intermediate steps")
 args = vars(ap.parse_args())
 
@@ -104,8 +105,7 @@ for (quesID, i) in enumerate(np.arange(0, len(questionCnts), 5)):
 
 percent = (correct / 5.0) * 100
 cv2.putText(transformed, f'{percent:.2f} %', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), thickness=2)
-cv2.imshow('Original', orig)
-cv2.imshow('Final', transformed)
-loader.write_to_disk(transformed, f'./Data/Output/{os.path.basename(args["input"])[:-4]}.png')
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
+loader.display_images([('Original', orig),('Final', transformed)])
+
+loader.write_to_disk(transformed, args["output"])
