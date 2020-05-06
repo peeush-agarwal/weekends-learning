@@ -141,6 +141,3 @@ ML-Flow/images/**
 ML-Flow/mlruns/**
 ML-Flow/data/**
 Projects/MNIST/Data/**
-Projects/BubbleSheetOMR/Data/Input/**
-Projects/BubbleSheetOMR/Data/Output/**
-
