@@ -133,6 +133,7 @@ dmypy.json
 
 # Custom ignore rules
 Deep-Learning/**/Data/**
+Deep-Learning/Datasets/images/**
 Deep-Learning/Datasets/mlruns/**
 Deep-Learning/OpenCv/PyImageSearch-tutorials/Data/Input/**
 Deep-Learning/OpenCv/PyImageSearch-tutorials/Data/Output/**
@@ -140,4 +141,6 @@ ML-Flow/images/**
 ML-Flow/mlruns/**
 ML-Flow/data/**
 Projects/MNIST/Data/**
+Projects/BubbleSheetOMR/Data/Input/**
+Projects/BubbleSheetOMR/Data/Output/**
 
