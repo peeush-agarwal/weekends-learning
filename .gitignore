@@ -141,3 +141,4 @@ ML-Flow/images/**
 ML-Flow/mlruns/**
 ML-Flow/data/**
 Projects/MNIST/Data/**
+Projects/Employee-Churn-Prediction/catboost_info/
